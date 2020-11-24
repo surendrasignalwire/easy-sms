@@ -48,6 +48,8 @@
 - [UE35.net](http://uesms.ue35.cn/)
 - [Ucloud](https://www.ucloud.cn)
 - [短信宝](http://www.smsbao.com/)
+- [Tiniyo] (https://tiniyo.com/)
+
 ## 环境需求
 
 - PHP >= 5.6
@@ -512,7 +514,20 @@ $easySms->send(13188888888, $message);
     'twilio' => [
         'account_sid' => '', // sid
         'from' => '', // 发送的号码 可以在控制台购买
-        'token' => '', // apitoken
+        'token' => '', // apitokentiniyo
+    ],
+```
+
+### [tiniyo](https://www.tiniyo.com)
+
+短信使用 `content`
+发送对象需要 使用`+`添加区号
+
+```php
+    'tiniyo' => [
+        'account_sid' => '', // auth_id from https://tiniyo.com
+        'from' => '', // 发送的号码 可以在控制台购买
+        'token' => '', // auth_secret from https://tiniyo.com
     ],
 ```
 
